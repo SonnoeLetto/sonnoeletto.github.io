@@ -1,9 +1,10 @@
+$(document).ready(function() {
 
-const burger = document.querySelector('.menu__btn');
-const burgerMenu = document.querySelector('.menu__inner');
-burger.addEventListener('click', ()=> {
-    burger.classList.toggle('menu__btn-active');
-    burgerMenu.classList.toggle('menu__inner-show');
+const burger = $('.menu__btn');
+const burgerMenu = $('.menu__inner');
+burger.on('click', ()=> {
+    burger.toggleClass('menu__btn-active');
+    burgerMenu.toggleClass('menu__inner-show');
 })
 
 $(".slider").slick({
@@ -33,9 +34,9 @@ $(".slider").slick({
   });
 
   $(window).resize(() => {
-      if($(window).width() === 768){
+      if($(window).width() === 768 && 769 && 770 && 771){
           console.log('reload') 
           return location.reload()
       }
   })
-  
+});
