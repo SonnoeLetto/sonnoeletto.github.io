@@ -2,11 +2,27 @@ $(document).ready(function() {
 
 const burger = $('.menu__btn');
 const burgerMenu = $('.menu__inner');
+const lang =  $('.lang')
 burger.on('click', ()=> {
     burger.toggleClass('menu__btn-active');
     burgerMenu.toggleClass('menu__inner-show');
 })
 
+
+function langChange() {
+  let count = true
+  lang.on('click', () => {
+    if (count) {
+      $('.lang').text('RU');
+      return count = false
+    }
+    if (!count) {
+      $('.lang').text('EU');
+      return count = true
+    }
+  })
+}
+langChange()
 $(".slider").slick({
  
     infinite: false,
